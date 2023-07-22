@@ -1,6 +1,6 @@
 FROM node:latest
 # Create app directory
-WORKDIR /home/gauri/project00/Weather-App
+WORKDIR /tmp/Weather-App
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
