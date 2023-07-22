@@ -1,6 +1,15 @@
 pipeline {
-    agent any
-    
+     agent {
+        kubernetes {
+            label 'jenkins-agent'
+            containerTemplate {
+                name 'docker'
+                image 'docker:20.10.8'  // Use the appropriate Docker version here
+                command 'cat' // This keeps the container running indefinitely
+                ttyEnabled true
+            }
+        }
+    }
     environment {
         // Change these values accordingly
         DOCKER_REGISTRY = 'docker.io' // Replace with your container registry
