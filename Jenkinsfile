@@ -30,7 +30,7 @@ pipeline {
 
         stage('Deploy to Kubernetes') {
             steps {
-                sh "kubectl apply -f deployment.yaml  // Replace 'kubernetes/deployment.yaml' with the path to your Kubernetes deployment file
+                sh "kubectl apply -f deployment.yaml"  // Replace 'kubernetes/deployment.yaml' with the path to your Kubernetes deployment file
             }
         }
     }
