@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Clone Git Repository') {
             steps {
-                git 'https://github.com/showmikb/Weather-App.git'
+                git branch: 'main', url: 'https://github.com/showmikb/Weather-App.git'
             }
         }
 
